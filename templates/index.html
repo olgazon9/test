@@ -1,6 +1,5 @@
 <!-- templates/index.html -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +23,10 @@
     <h2>Result:</h2>
     <p id="result"></p>
 
-    
+    <button onclick="sumOfDigits()">Sum of Digits</button>
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+
     <script src="{{ url_for('static', filename='simp.js') }}"></script>
+    <script src="{{ url_for('static', filename='comp.js') }}"></script>
 </body>
 </html>

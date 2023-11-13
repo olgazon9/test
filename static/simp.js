@@ -1,4 +1,6 @@
-// static/script.js
+// static/simp.js
+
+let simpFunctionCalled = false;
 
 function addNumbers() {
     let num1 = document.getElementById("num1").value;
@@ -7,6 +9,7 @@ function addNumbers() {
     axios.get(`/simp/add/${num1}/${num2}`)
         .then(response => {
             document.getElementById("result").innerText = `Result: ${response.data.result}`;
+            simpFunctionCalled = true;
         })
         .catch(error => {
             console.error("Error:", error);
@@ -20,6 +23,7 @@ function subtractNumbers() {
     axios.get(`/simp/subtract/${num1}/${num2}`)
         .then(response => {
             document.getElementById("result").innerText = `Result: ${response.data.result}`;
+            simpFunctionCalled = true;
         })
         .catch(error => {
             console.error("Error:", error);
